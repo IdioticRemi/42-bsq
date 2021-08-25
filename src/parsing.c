@@ -6,7 +6,7 @@
 /*   By: kbarbry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 15:38:18 by kbarbry           #+#    #+#             */
-/*   Updated: 2021/08/24 17:13:48 by tjolivea         ###   ########lyon.fr   */
+/*   Updated: 2021/08/25 04:17:44 by tjolivea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ void	free_grid(t_bsq *bsq)
 
 t_bool	allocgrid(t_bsq *bsq)
 {
-	t_uint i;
-	t_uint j;
+	t_uint	i;
+	t_uint	j;
 
 	bsq->grid = malloc(sizeof(t_uint *) * bsq->size_x);
-
 	if (!bsq->grid)
 		return (FALSE);
 	i = 0;
@@ -71,7 +70,7 @@ t_bool	parse(t_bsq *bsq)
 	t_str	fc;
 	t_uint	x;
 	t_uint	y;
-	char 	c;
+	char	c;
 
 	if (!allocgrid(bsq))
 		return (FALSE);

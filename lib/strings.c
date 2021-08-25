@@ -6,7 +6,7 @@
 /*   By: tjolivea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:17:21 by tjolivea          #+#    #+#             */
-/*   Updated: 2021/08/25 03:46:04 by tjolivea         ###   ########lyon.fr   */
+/*   Updated: 2021/08/25 03:46:14 by tjolivea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include "bsq.h"
@@ -58,7 +58,7 @@ long	ft_strcount(t_str str, char c)
 int	ft_atoi(t_str str, int max_i)
 {
 	int	x;
-	int i;
+	int	i;
 
 	x = 0;
 	i = 0;

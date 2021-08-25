@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bsq.h                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tjolivea <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/25 04:20:21 by tjolivea          #+#    #+#             */
+/*   Updated: 2021/08/25 04:20:21 by tjolivea         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
 #ifndef BSQ_H
 # define BSQ_H
 
@@ -5,7 +16,6 @@
 
 # define TRUE	1
 # define FALSE	0
-
 
 // Standard libraries
 
@@ -17,14 +27,12 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
-
 // Typedefs
 
 typedef int				t_bool;
 typedef char *			t_str;
 typedef unsigned int	t_uint;
 typedef t_uint **		t_matrix;
-
 
 // Custom structures
 
@@ -35,21 +43,21 @@ typedef struct s_file {
 }	t_file;
 
 typedef struct s_charset {
-	char	obstacle;		// Charactère qui rpz un obstacle
-	char	empty;			// Charactère qui rpz une case vide
-	char	fill;			// Charactère qui rpz une case remplie
+	char	obstacle;
+	char	empty;
+	char	fill;
 }	t_charset;
 
 typedef struct s_bsq {
-	t_charset	charset;	// Charset utilisé dans la map. (Header de la map)
-	t_matrix	grid;		// Matrice de taille size_x par size_y.
-	long		sqr_x;		// Position en X du plus grand carré trouvé.
-	long		sqr_y;		// Position en Y du plus grand carré trouvé.
-	long		size_x;		// Taille de la map en X.
-	long		size_y;		// Taille de la map en Y.
-	long		size;		// Taille du plus grand carré trouvé.
-	long		padstart;	// Longueur de la première ligne.
-	t_file		file;		// Fichier d'origine.
+	t_charset	charset;
+	t_matrix	grid;
+	long		sqr_x;
+	long		sqr_y;
+	long		size_x;
+	long		size_y;
+	long		size;
+	long		padstart;
+	t_file		file;
 }	t_bsq;
 
 t_bool	parse(t_bsq *bsq);
@@ -76,12 +84,10 @@ t_str	ft_cut_string(t_str str, char c);
 void	ft_putstr(t_str str);
 void	ft_putchar(char c);
 
-t_file	ft_stdinread();
+t_file	ft_stdinread(void);
 t_file	ft_fileread(t_str path);
 t_bool	ft_file_exists(t_str path);
 
 void	free_grid(t_bsq *bsq);
 
-
-//
 #endif

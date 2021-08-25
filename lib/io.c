@@ -6,7 +6,7 @@
 /*   By: tjolivea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:17:19 by tjolivea          #+#    #+#             */
-/*   Updated: 2021/08/25 02:46:15 by tjolivea         ###   ########lyon.fr   */
+/*   Updated: 2021/08/25 04:16:50 by tjolivea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #include <bsq.h>
@@ -15,7 +15,7 @@ t_str	ft_realloc(t_str	old, t_str	buf, long old_len, long buf_len)
 {
 	t_str	new;
 	long	i;
-	long 	j;
+	long	j;
 
 	j = 0;
 	i = 0;
@@ -30,7 +30,7 @@ t_str	ft_realloc(t_str	old, t_str	buf, long old_len, long buf_len)
 	return (new);
 }
 
-t_file	ft_stdinread()
+t_file	ft_stdinread(void)
 {
 	t_file	file;
 	int		stat;
