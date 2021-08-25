@@ -18,7 +18,4 @@ clean:
 fclean: clean
 	rm -f ${NAME}
 
-norm:
-	find . -type f -name "*.c" -exec norminette -R CheckDefine {} +
-
 re: fclean all
