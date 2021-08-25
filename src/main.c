@@ -6,7 +6,7 @@
 /*   By: tjolivea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 15:37:10 by tjolivea          #+#    #+#             */
-/*   Updated: 2021/08/25 05:03:37 by tjolivea         ###   ########lyon.fr   */
+/*   Updated: 2021/08/25 13:39:38 by tjolivea         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,14 @@ t_bool	pas_un_moyen_de_raccourcir_le_code(t_bsq *bsq)
 {
 	free(bsq->file.content);
 	return (print_error());
+}
+
+void	rien(t_bsq *bsq)
+{
+	bsq->padstart = ft_strulen(bsq->file.content, "\n") + 1;
+	bsq->sqr_x = 0;
+	bsq->sqr_y = 0;
+	bsq->size = 0;
 }
 
 int	main(int argc, char **argv)
@@ -42,10 +50,10 @@ int	main(int argc, char **argv)
 		valid = verif_all_grid(bsq.file.content, &bsq, 0, 0);
 		if (!valid)
 			return (pas_un_moyen_de_raccourcir_le_code(&bsq));
-		bsq.padstart = ft_strulen(bsq.file.content, "\n") + 1;
+		rien(&bsq);
 		parse(&bsq);
 		run_algo(&bsq);
-		ft_print_tab(&bsq);
+		ft_print_tab(&bsq, 0, 0, 0);
 		free(bsq.file.content);
 		free_grid(&bsq);
 	}

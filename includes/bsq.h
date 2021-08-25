@@ -62,7 +62,7 @@ typedef struct s_bsq {
 
 t_bool	parse(t_bsq *bsq);
 void	run_algo(t_bsq *bsq);
-void	ft_print_tab(t_bsq *bsq);
+void	ft_print_tab(t_bsq *bsq, long i, long x, long y);
 
 //verif_grid_opti.c
 
